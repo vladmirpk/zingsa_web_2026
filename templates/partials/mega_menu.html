@@ -1,0 +1,283 @@
+{% load static %}
+<!-- ==========================================================================
+     Mega menu panels
+     CRITICAL CONSTRAINT: each panel is width-constrained (max ~880px / 560px)
+     and positioned under its trigger by zingsa-nav.js — it never spans the
+     full viewport width. On mobile this file is hidden entirely; navigation
+     is handled by the offcanvas accordion in navbar.html instead.
+     ========================================================================== -->
+<div class="zn-mega-layer" data-zn-mega-layer aria-hidden="false">
+
+  <!-- About -->
+  <div class="zn-mega" data-zn-mega="about" role="region" aria-label="About menu">
+    <div class="zn-mega__grid">
+      <div class="zn-mega__groups" style="--zn-mega-cols:1;">
+        <div>
+          <a class="zn-mega__link" href="{% url 'about' %}#overview">
+            <span class="zn-mega__link-icon"><i class="bi bi-info-circle" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Overview</span>
+              <span class="zn-mega__link-desc">Who we are and why we exist</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'leadership' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Leadership</span>
+              <span class="zn-mega__link-desc">Director General &amp; governance</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'about' %}#mandate">
+            <span class="zn-mega__link-icon"><i class="bi bi-bank" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Mandate &amp; Legal</span>
+              <span class="zn-mega__link-desc">Research Act &amp; founding legislation</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'nsdi' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">NSDI Framework</span>
+              <span class="zn-mega__link-desc">National spatial data infrastructure</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'about' %}#partners">
+            <span class="zn-mega__link-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Partnerships</span>
+              <span class="zn-mega__link-desc">Working with government &amp; partners</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="zn-mega__feature">
+        <img src="{% static 'images/about-feature-launch.jpg' %}" alt="Official ZINGSA launch" loading="lazy">
+        <div class="zn-mega__feature-caption">
+          <strong>Established for the nation</strong>
+          <span>Launched by His Excellency the President in 2021</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Programmes -->
+  <div class="zn-mega" data-zn-mega="programmes" role="region" aria-label="Programmes menu">
+    <div class="zn-mega__grid">
+      <div class="zn-mega__groups" style="--zn-mega-cols:3;">
+        <div>
+          <p class="zn-mega__group-title">Space Science</p>
+          <a class="zn-mega__link" href="{% url 'space_weather' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-cloud-lightning" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Space Weather</span>
+              <span class="zn-mega__link-desc">Ionosphere &amp; GNSS research</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'programmes' %}#zimsat">
+            <span class="zn-mega__link-icon"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">ZIMSAT Missions</span>
+              <span class="zn-mega__link-desc">ZIMSAT-1 &amp; ZIMSAT-2</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'programmes' %}#cubesat">
+            <span class="zn-mega__link-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">CubeSat Development</span>
+              <span class="zn-mega__link-desc">Small satellite design &amp; manufacture</span>
+            </span>
+          </a>
+        </div>
+        <div>
+          <p class="zn-mega__group-title">Earth Observation</p>
+          <a class="zn-mega__link" href="{% url 'earth_observation' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-camera" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Imagery &amp; Mapping</span>
+              <span class="zn-mega__link-desc">Earth observation products</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'programmes' %}#agro">
+            <span class="zn-mega__link-icon"><i class="bi bi-tree" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Agro-Ecological Zones</span>
+              <span class="zn-mega__link-desc">Satellite-led agricultural planning</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'programmes' %}#wetlands">
+            <span class="zn-mega__link-icon"><i class="bi bi-water" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Wetlands Mapping</span>
+              <span class="zn-mega__link-desc">National wetlands master plan</span>
+            </span>
+          </a>
+        </div>
+        <div>
+          <p class="zn-mega__group-title">GIS &amp; Geospatial</p>
+          <a class="zn-mega__link" href="{% url 'nsdi' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">NSDI</span>
+              <span class="zn-mega__link-desc">Spatial data infrastructure</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'cors' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-broadcast" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">CORS Network</span>
+              <span class="zn-mega__link-desc">National GNSS positioning</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'nsdi' %}#mapping">
+            <span class="zn-mega__link-icon"><i class="bi bi-map" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">National Mapping</span>
+              <span class="zn-mega__link-desc">Topographic &amp; thematic maps</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="zn-mega__feature">
+        <img src="{% static 'images/programmes-feature-zimsat1.png' %}" alt="ZIMSAT-1 satellite" loading="lazy">
+        <div class="zn-mega__feature-caption">
+          <strong>From orbit to impact</strong>
+          <span>Satellites &amp; geospatial programmes serving the nation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services & Projects -->
+  <div class="zn-mega" data-zn-mega="services" role="region" aria-label="Services and Projects menu">
+    <div class="zn-mega__grid">
+      <div class="zn-mega__groups" style="--zn-mega-cols:2;">
+        <div>
+          <p class="zn-mega__group-title">Services</p>
+          <a class="zn-mega__link" href="{% url 'services' %}#drone-spraying">
+            <span class="zn-mega__link-icon"><i class="bi bi-airplane" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Drone Crop Spraying</span>
+              <span class="zn-mega__link-desc">Precision agriculture for farmers</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'services' %}#survey">
+            <span class="zn-mega__link-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Survey &amp; GNSS</span>
+              <span class="zn-mega__link-desc">CORS-backed positioning services</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'services' %}#imagery">
+            <span class="zn-mega__link-icon"><i class="bi bi-map" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Imagery &amp; Mapping</span>
+              <span class="zn-mega__link-desc">Earth observation products</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'services' %}#book">
+            <span class="zn-mega__link-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Book a Service</span>
+              <span class="zn-mega__link-desc">Talk to our operations team</span>
+            </span>
+          </a>
+        </div>
+        <div>
+          <p class="zn-mega__group-title">Projects</p>
+          <a class="zn-mega__link" href="{% url 'research' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Research &amp; Innovation</span>
+              <span class="zn-mega__link-desc">Cutting-edge space science</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'projects' %}#ground-stations">
+            <span class="zn-mega__link-icon"><i class="bi bi-hdd-network" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Ground Stations</span>
+              <span class="zn-mega__link-desc">Mazowe centre &amp; mission control</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'projects' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-kanban" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Current Projects</span>
+              <span class="zn-mega__link-desc">What we&rsquo;re building now</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="zn-mega__feature">
+        <img src="{% static 'images/services-feature-drone.jpg' %}" alt="Drone crop spraying service" loading="lazy">
+        <div class="zn-mega__feature-caption">
+          <strong>Precision for the field</strong>
+          <span>Drone &amp; geospatial services you can book today</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Media & Education -->
+  <div class="zn-mega" data-zn-mega="media" role="region" aria-label="Media and Education menu">
+    <div class="zn-mega__grid">
+      <div class="zn-mega__groups" style="--zn-mega-cols:2;">
+        <div>
+          <p class="zn-mega__group-title">Media</p>
+          <a class="zn-mega__link" href="{% url 'news' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-newspaper" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">News &amp; Announcements</span>
+              <span class="zn-mega__link-desc">Updates from across the agency</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'gallery' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-images" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Gallery</span>
+              <span class="zn-mega__link-desc">Facilities and missions</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'events' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-calendar-event" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Events &amp; Outreach</span>
+              <span class="zn-mega__link-desc">World Space Week, ZITF &amp; more</span>
+            </span>
+          </a>
+        </div>
+        <div>
+          <p class="zn-mega__group-title">Education</p>
+          <a class="zn-mega__link" href="{% url 'education' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">School Outreach</span>
+              <span class="zn-mega__link-desc">STEM programmes for students</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'careers' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-briefcase" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Careers &amp; Training</span>
+              <span class="zn-mega__link-desc">Join Zimbabwe&rsquo;s space journey</span>
+            </span>
+          </a>
+          <a class="zn-mega__link" href="{% url 'resources' %}">
+            <span class="zn-mega__link-icon"><i class="bi bi-folder2-open" aria-hidden="true"></i></span>
+            <span>
+              <span class="zn-mega__link-title">Resources &amp; FAQ</span>
+              <span class="zn-mega__link-desc">Documents, maps &amp; common questions</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="zn-mega__feature">
+        <img src="{% static 'images/media-feature-outreach.jpg' %}" alt="World Space Week outreach" loading="lazy">
+        <div class="zn-mega__feature-caption">
+          <strong>Explore ZINGSA</strong>
+          <span>News, media, and public outreach</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

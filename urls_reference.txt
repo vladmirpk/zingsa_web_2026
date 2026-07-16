@@ -1,0 +1,51 @@
+ZINGSA — Django URL name reference (Phase 1)
+==============================================
+Every link in templates/ uses {% url 'name' %} — never a hardcoded path.
+Add matching `path(..., name='...')` entries to your Django urls.py so
+these templates render without a NoReverseMatch error.
+
+Anchors (e.g. #overview, #drone-spraying) are section IDs on the target
+page, not separate URL names — they mirror the anchor pattern already
+used in the existing static site (about.html#overview, etc.).
+
+Suggested app: a single `pages` app is enough for Phase 1.
+
+name                path (suggested)                template (Phase 1 status)
+----------------    ----------------------------     --------------------------------
+home                /                                templates/pages/home.html (BUILT)
+about               /about/                          not yet built — About overview page
+leadership          /about/leadership/                not yet built — Director General / governance
+nsdi                /nsdi/                           not yet built — NSDI framework
+programmes          /programmes/                     not yet built — hub for space science, EO, GIS
+space_weather       /programmes/space-weather/        not yet built
+earth_observation   /programmes/earth-observation/    not yet built — imagery & mapping hub
+cors                /programmes/cors/                not yet built — CORS network
+services            /services/                       not yet built — services + booking
+research            /projects/research/               not yet built
+projects            /projects/                       not yet built — current projects hub
+news                /media/news/                     not yet built
+gallery             /media/gallery/                  not yet built
+events              /media/events/                   not yet built
+education           /education/                      not yet built — school outreach
+careers             /careers/                        not yet built
+resources           /resources/                      not yet built — documents + FAQ
+contact             /contact/                        not yet built
+search              /search/                         not yet built — hero search form target (GET, ?q=)
+
+Sections used as anchors (page#section-id):
+  about#overview, about#mandate, about#partners
+  programmes#zimsat, programmes#cubesat, programmes#agro, programmes#wetlands
+  nsdi#mapping
+  services#drone-spraying, services#survey, services#imagery, services#book
+  projects#ground-stations
+
+Notes
+-----
+- Only `home` is implemented with a real template this phase
+  (templates/pages/home.html). All other names above must exist in
+  urls.py (even pointing at a temporary placeholder view) or every
+  other page's {% url %} tags will raise NoReverseMatch — including
+  the ones referenced from home.html's navbar/mega menu.
+- Quick temporary fix while building out Phase 2+ pages: point every
+  name above at the same placeholder view/template so the site is
+  fully click-through-able before each real page is built.

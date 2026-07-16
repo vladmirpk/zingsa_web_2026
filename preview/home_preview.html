@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZINGSA — Preview (Phase 1: Navbar, Mega Menu &amp; Hero)</title>
+  <meta name="description" content="Static, Django-free preview of the Phase 1 navbar, mega menu, and homepage hero. Not a build target — see templates/ for the real Django templates.">
+  <link rel="icon" type="image/png" href="../static/images/zingsa-logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="../static/css/zingsa.css">
+</head>
+<body>
+  <a class="zn-skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ====================================================================
+       PREVIEW NOTE: this file is a plain-HTML stand-in for
+       templates/layouts/base.html + partials/navbar.html +
+       partials/mega_menu.html + sections/hero_home.html, with every
+       {% url %} replaced by "#" and every {% static %} replaced by a
+       relative ../static/ path, purely so it can be opened directly in
+       a browser without Django running. The real deliverables are the
+       Django templates under templates/ — always edit those, not this
+       file, then re-sync this preview if needed.
+       ==================================================================== -->
+
+  <header class="zn-header">
+    <div class="zn-topbar d-none d-lg-flex align-items-center">
+      <div class="container-fluid" style="max-width: var(--zn-container-max);">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <span class="zn-topbar__item">
+              <i class="bi bi-telephone me-1" aria-hidden="true"></i>
+              <a href="tel:+2638677009885">+263 8677009885</a>
+            </span>
+            <span class="zn-topbar__item">
+              <i class="bi bi-envelope me-1" aria-hidden="true"></i>
+              <a href="mailto:publicrelations@zingsa.ac.zw">publicrelations@zingsa.ac.zw</a>
+            </span>
+            <span class="zn-topbar__item">
+              <i class="bi bi-clock me-1" aria-hidden="true"></i>
+              Mon&ndash;Fri, 8am&ndash;4pm
+            </span>
+          </div>
+          <a href="#" class="zn-topbar__cta text-decoration-none">
+            Contact Us <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="zn-navbar is-on-hero" data-zn-navbar aria-label="Primary">
+      <div class="zn-navbar__inner">
+        <a href="#" class="zn-brand">
+          <img src="../static/images/zingsa-logo.png" alt="ZINGSA emblem" class="zn-brand__mark">
+          <span class="zn-brand__text">
+            <span class="zn-brand__title">ZINGSA</span>
+            <span class="zn-brand__subtitle">Geospatial &amp; Space Agency</span>
+          </span>
+        </a>
+
+        <ul class="zn-nav" role="menubar">
+          <li class="zn-nav__item" role="none">
+            <a href="#" class="zn-nav__link" role="menuitem" aria-current="page">Home</a>
+          </li>
+          <li class="zn-nav__item" data-zn-nav-item="about" role="none">
+            <a href="#" class="zn-nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              About <i class="bi bi-chevron-down zn-nav__chevron" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="zn-nav__item" data-zn-nav-item="programmes" role="none">
+            <a href="#" class="zn-nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              Programmes <i class="bi bi-chevron-down zn-nav__chevron" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="zn-nav__item" data-zn-nav-item="services" role="none">
+            <a href="#" class="zn-nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              Services &amp; Projects <i class="bi bi-chevron-down zn-nav__chevron" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="zn-nav__item" data-zn-nav-item="media" role="none">
+            <a href="#" class="zn-nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              Media &amp; Education <i class="bi bi-chevron-down zn-nav__chevron" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="zn-nav__item" role="none">
+            <a href="#" class="zn-nav__link" role="menuitem">Contact</a>
+          </li>
+        </ul>
+
+        <div class="zn-nav__actions">
+          <a href="#" class="zn-btn zn-btn-gold zn-btn-sm d-none d-xl-inline-flex">
+            <i class="bi bi-calendar-check" aria-hidden="true"></i> Book a Service
+          </a>
+          <button class="zn-nav__toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#znMobileNav" aria-controls="znMobileNav" aria-label="Open menu">
+            <i class="bi bi-list" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mega menu panels -->
+      <div class="zn-mega-layer" data-zn-mega-layer aria-hidden="false">
+
+        <div class="zn-mega" data-zn-mega="about" role="region" aria-label="About menu">
+          <div class="zn-mega__grid">
+            <div class="zn-mega__groups" style="--zn-mega-cols:1;">
+              <div>
+                <a class="zn-mega__link" href="#">
+                  <span class="zn-mega__link-icon"><i class="bi bi-info-circle" aria-hidden="true"></i></span>
+                  <span><span class="zn-mega__link-title">Overview</span><span class="zn-mega__link-desc">Who we are and why we exist</span></span>
+                </a>
+                <a class="zn-mega__link" href="#">
+                  <span class="zn-mega__link-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span>
+                  <span><span class="zn-mega__link-title">Leadership</span><span class="zn-mega__link-desc">Director General &amp; governance</span></span>
+                </a>
+                <a class="zn-mega__link" href="#">
+                  <span class="zn-mega__link-icon"><i class="bi bi-bank" aria-hidden="true"></i></span>
+                  <span><span class="zn-mega__link-title">Mandate &amp; Legal</span><span class="zn-mega__link-desc">Research Act &amp; founding legislation</span></span>
+                </a>
+                <a class="zn-mega__link" href="#">
+                  <span class="zn-mega__link-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span>
+                  <span><span class="zn-mega__link-title">NSDI Framework</span><span class="zn-mega__link-desc">National spatial data infrastructure</span></span>
+                </a>
+                <a class="zn-mega__link" href="#">
+                  <span class="zn-mega__link-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+                  <span><span class="zn-mega__link-title">Partnerships</span><span class="zn-mega__link-desc">Working with government &amp; partners</span></span>
+                </a>
+              </div>
+            </div>
+            <div class="zn-mega__feature">
+              <img src="../static/images/about-feature-launch.jpg" alt="Official ZINGSA launch" loading="lazy">
+              <div class="zn-mega__feature-caption">
+                <strong>Established for the nation</strong>
+                <span>Launched by His Excellency the President in 2021</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="zn-mega" data-zn-mega="programmes" role="region" aria-label="Programmes menu">
+          <div class="zn-mega__grid">
+            <div class="zn-mega__groups" style="--zn-mega-cols:3;">
+              <div>
+                <p class="zn-mega__group-title">Space Science</p>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-cloud-lightning" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Space Weather</span><span class="zn-mega__link-desc">Ionosphere &amp; GNSS research</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">ZIMSAT Missions</span><span class="zn-mega__link-desc">ZIMSAT-1 &amp; ZIMSAT-2</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">CubeSat Development</span><span class="zn-mega__link-desc">Small satellite design &amp; manufacture</span></span></a>
+              </div>
+              <div>
+                <p class="zn-mega__group-title">Earth Observation</p>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-camera" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Imagery &amp; Mapping</span><span class="zn-mega__link-desc">Earth observation products</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-tree" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Agro-Ecological Zones</span><span class="zn-mega__link-desc">Satellite-led agricultural planning</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-water" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Wetlands Mapping</span><span class="zn-mega__link-desc">National wetlands master plan</span></span></a>
+              </div>
+              <div>
+                <p class="zn-mega__group-title">GIS &amp; Geospatial</p>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">NSDI</span><span class="zn-mega__link-desc">Spatial data infrastructure</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-broadcast" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">CORS Network</span><span class="zn-mega__link-desc">National GNSS positioning</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-map" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">National Mapping</span><span class="zn-mega__link-desc">Topographic &amp; thematic maps</span></span></a>
+              </div>
+            </div>
+            <div class="zn-mega__feature">
+              <img src="../static/images/programmes-feature-zimsat1.png" alt="ZIMSAT-1 satellite" loading="lazy">
+              <div class="zn-mega__feature-caption">
+                <strong>From orbit to impact</strong>
+                <span>Satellites &amp; geospatial programmes serving the nation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="zn-mega" data-zn-mega="services" role="region" aria-label="Services and Projects menu">
+          <div class="zn-mega__grid">
+            <div class="zn-mega__groups" style="--zn-mega-cols:2;">
+              <div>
+                <p class="zn-mega__group-title">Services</p>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-airplane" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Drone Crop Spraying</span><span class="zn-mega__link-desc">Precision agriculture for farmers</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Survey &amp; GNSS</span><span class="zn-mega__link-desc">CORS-backed positioning services</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-map" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Imagery &amp; Mapping</span><span class="zn-mega__link-desc">Earth observation products</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Book a Service</span><span class="zn-mega__link-desc">Talk to our operations team</span></span></a>
+              </div>
+              <div>
+                <p class="zn-mega__group-title">Projects</p>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Research &amp; Innovation</span><span class="zn-mega__link-desc">Cutting-edge space science</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-hdd-network" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Ground Stations</span><span class="zn-mega__link-desc">Mazowe centre &amp; mission control</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-kanban" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Current Projects</span><span class="zn-mega__link-desc">What we&rsquo;re building now</span></span></a>
+              </div>
+            </div>
+            <div class="zn-mega__feature">
+              <img src="../static/images/services-feature-drone.jpg" alt="Drone crop spraying service" loading="lazy">
+              <div class="zn-mega__feature-caption">
+                <strong>Precision for the field</strong>
+                <span>Drone &amp; geospatial services you can book today</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="zn-mega" data-zn-mega="media" role="region" aria-label="Media and Education menu">
+          <div class="zn-mega__grid">
+            <div class="zn-mega__groups" style="--zn-mega-cols:2;">
+              <div>
+                <p class="zn-mega__group-title">Media</p>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-newspaper" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">News &amp; Announcements</span><span class="zn-mega__link-desc">Updates from across the agency</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-images" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Gallery</span><span class="zn-mega__link-desc">Facilities and missions</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-calendar-event" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Events &amp; Outreach</span><span class="zn-mega__link-desc">World Space Week, ZITF &amp; more</span></span></a>
+              </div>
+              <div>
+                <p class="zn-mega__group-title">Education</p>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">School Outreach</span><span class="zn-mega__link-desc">STEM programmes for students</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-briefcase" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Careers &amp; Training</span><span class="zn-mega__link-desc">Join Zimbabwe&rsquo;s space journey</span></span></a>
+                <a class="zn-mega__link" href="#"><span class="zn-mega__link-icon"><i class="bi bi-folder2-open" aria-hidden="true"></i></span><span><span class="zn-mega__link-title">Resources &amp; FAQ</span><span class="zn-mega__link-desc">Documents, maps &amp; common questions</span></span></a>
+              </div>
+            </div>
+            <div class="zn-mega__feature">
+              <img src="../static/images/media-feature-outreach.jpg" alt="World Space Week outreach" loading="lazy">
+              <div class="zn-mega__feature-caption">
+                <strong>Explore ZINGSA</strong>
+                <span>News, media, and public outreach</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="offcanvas offcanvas-end zn-offcanvas" tabindex="-1" id="znMobileNav" aria-labelledby="znMobileNavLabel">
+    <div class="offcanvas-header">
+      <span class="zn-brand" id="znMobileNavLabel">
+        <img src="../static/images/zingsa-logo.png" alt="ZINGSA emblem" class="zn-brand__mark" style="width:36px;height:36px;">
+        <span class="zn-brand__text"><span class="zn-brand__title">ZINGSA</span></span>
+      </span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="accordion zn-accordion" id="znMobileAccordion">
+        <a class="zn-accordion-link fw-bold" href="#">Home</a>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#znmAbout">About</button></h2>
+          <div id="znmAbout" class="accordion-collapse collapse" data-bs-parent="#znMobileAccordion">
+            <div class="accordion-body">
+              <a class="zn-accordion-link" href="#">Overview</a>
+              <a class="zn-accordion-link" href="#">Leadership</a>
+              <a class="zn-accordion-link" href="#">Mandate &amp; Legal</a>
+              <a class="zn-accordion-link" href="#">NSDI Framework</a>
+              <a class="zn-accordion-link" href="#">Partnerships</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#znmProgrammes">Programmes</button></h2>
+          <div id="znmProgrammes" class="accordion-collapse collapse" data-bs-parent="#znMobileAccordion">
+            <div class="accordion-body">
+              <small class="d-block mt-1">Space Science</small>
+              <a class="zn-accordion-link" href="#">Space Weather &amp; Ionosphere</a>
+              <a class="zn-accordion-link" href="#">ZIMSAT Satellite Missions</a>
+              <a class="zn-accordion-link" href="#">CubeSat Development</a>
+              <small class="d-block mt-2">Earth Observation</small>
+              <a class="zn-accordion-link" href="#">Imagery &amp; Mapping</a>
+              <a class="zn-accordion-link" href="#">Agro-Ecological Zones</a>
+              <a class="zn-accordion-link" href="#">Wetlands Mapping</a>
+              <small class="d-block mt-2">GIS &amp; Geospatial</small>
+              <a class="zn-accordion-link" href="#">National Spatial Data Infrastructure</a>
+              <a class="zn-accordion-link" href="#">CORS Network</a>
+              <a class="zn-accordion-link" href="#">National Mapping</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#znmServices">Services &amp; Projects</button></h2>
+          <div id="znmServices" class="accordion-collapse collapse" data-bs-parent="#znMobileAccordion">
+            <div class="accordion-body">
+              <small class="d-block mt-1">Services</small>
+              <a class="zn-accordion-link" href="#">Drone Crop Spraying</a>
+              <a class="zn-accordion-link" href="#">Survey &amp; GNSS Positioning</a>
+              <a class="zn-accordion-link" href="#">Imagery &amp; Mapping Products</a>
+              <a class="zn-accordion-link" href="#">Book a Service</a>
+              <small class="d-block mt-2">Projects</small>
+              <a class="zn-accordion-link" href="#">Research &amp; Innovation</a>
+              <a class="zn-accordion-link" href="#">Ground Stations &amp; Mission Control</a>
+              <a class="zn-accordion-link" href="#">Current Projects</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#znmMedia">Media &amp; Education</button></h2>
+          <div id="znmMedia" class="accordion-collapse collapse" data-bs-parent="#znMobileAccordion">
+            <div class="accordion-body">
+              <small class="d-block mt-1">Media</small>
+              <a class="zn-accordion-link" href="#">News &amp; Announcements</a>
+              <a class="zn-accordion-link" href="#">Gallery</a>
+              <a class="zn-accordion-link" href="#">Events &amp; Outreach</a>
+              <small class="d-block mt-2">Education</small>
+              <a class="zn-accordion-link" href="#">School Outreach Programme</a>
+              <a class="zn-accordion-link" href="#">Careers &amp; Training</a>
+              <a class="zn-accordion-link" href="#">Resources &amp; FAQ</a>
+            </div>
+          </div>
+        </div>
+        <a class="zn-accordion-link fw-bold" href="#">Contact</a>
+        <div class="zn-offcanvas-cta">
+          <a href="#" class="zn-btn zn-btn-gold w-100 justify-content-center"><i class="bi bi-calendar-check" aria-hidden="true"></i> Book a Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="zn-hero" id="home-hero" aria-label="ZINGSA introduction">
+      <div class="zn-hero__media">
+        <img src="../static/images/hero-mazowe-ground-station.jpg" alt="ZINGSA engineer performing maintenance on the satellite ground station dish at the Mazowe Space Centre, Zimbabwe" loading="eager">
+      </div>
+      <div class="zn-hero__overlay" aria-hidden="true"></div>
+      <div class="zn-hero__particles" data-zn-particles aria-hidden="true"></div>
+
+      <div class="zn-hero__content">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-xl-10">
+              <span class="zn-hero__badge" data-aos="fade-up" data-aos-duration="600">
+                <span class="zn-dot" aria-hidden="true"></span>
+                Zimbabwe National Geospatial &amp; Space Agency
+              </span>
+
+              <h1 class="zn-hero__headline" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+                Space science, <span class="zn-accent">in service</span> of the nation
+              </h1>
+
+              <p class="zn-hero__sub" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+                From satellites in orbit to drones over farmland, ZINGSA applies space and
+                geospatial technology to agriculture, planning, and Zimbabwe&rsquo;s
+                industrialization &mdash; proudly Zimbabwean, scientifically rigorous.
+              </p>
+
+              <div class="zn-hero__ctas" data-aos="fade-up" data-aos-duration="700" data-aos-delay="220">
+                <a href="#" class="zn-btn zn-btn-gold">Explore ZINGSA <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                <a href="#" class="zn-btn zn-btn-glass">Our Programmes <i class="bi bi-rocket-takeoff" aria-hidden="true"></i></a>
+              </div>
+
+              <nav class="zn-hero__quicklinks" aria-label="Quick links" data-aos="fade-up" data-aos-duration="700" data-aos-delay="280">
+                <a class="zn-quicklink" href="#"><i class="bi bi-airplane" aria-hidden="true"></i> Drone Services</a>
+                <a class="zn-quicklink" href="#"><i class="bi bi-broadcast" aria-hidden="true"></i> CORS Network</a>
+                <a class="zn-quicklink" href="#"><i class="bi bi-cloud-lightning" aria-hidden="true"></i> Space Weather</a>
+                <a class="zn-quicklink" href="#"><i class="bi bi-diagram-3" aria-hidden="true"></i> NSDI</a>
+              </nav>
+
+              <form class="zn-hero__search" role="search" action="#" method="get" data-zn-hero-search data-aos="fade-up" data-aos-duration="700" data-aos-delay="340">
+                <div class="zn-search-form">
+                  <i class="bi bi-search zn-search-form__icon" aria-hidden="true"></i>
+                  <label for="heroSearchInput" class="visually-hidden">Search ZINGSA</label>
+                  <input type="search" id="heroSearchInput" name="q" placeholder="Search programmes, services, news&hellip;" autocomplete="off">
+                  <button type="submit" class="zn-btn zn-btn-gold zn-btn-sm">Search</button>
+                </div>
+              </form>
+
+              <div class="zn-hero__stats" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+                <div class="zn-stat">
+                  <span class="zn-stat__value"><span data-zn-counter="2">0</span><span class="zn-stat__suffix">+</span></span>
+                  <span class="zn-stat__label">Satellites in Orbit</span>
+                </div>
+                <div class="zn-stat">
+                  <span class="zn-stat__value"><span data-zn-counter="5">0</span></span>
+                  <span class="zn-stat__label">Specialised Divisions</span>
+                </div>
+                <div class="zn-stat">
+                  <span class="zn-stat__value"><span data-zn-counter="10">0</span><span class="zn-stat__suffix">yrs</span></span>
+                  <span class="zn-stat__label">Since Establishment</span>
+                </div>
+                <div class="zn-stat">
+                  <span class="zn-stat__value"><span data-zn-counter="24">0</span><span class="zn-stat__suffix">/7</span></span>
+                  <span class="zn-stat__label">CORS Network Uptime</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#story" class="zn-scroll-indicator" aria-label="Scroll to explore">
+        <span class="zn-scroll-indicator__mouse" aria-hidden="true"></span>
+        Scroll
+      </a>
+    </section>
+
+    <section id="story" class="py-5" aria-label="More content coming in the next phase">
+      <div class="container py-5 text-center text-secondary">
+        <p class="mb-0">
+          <i class="bi bi-cone-striped me-2" aria-hidden="true"></i>
+          The rest of the homepage (mission, programmes, map, news) arrives in Phase 2. This preview only covers the Phase 1 deliverables: navbar, mega menu, and hero.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="zn-footer-stub">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start">
+        <div class="d-flex align-items-center gap-2">
+          <img src="../static/images/zingsa-logo.png" alt="ZINGSA emblem" width="28" height="28" class="rounded-circle">
+          <span class="fw-bold text-white">ZINGSA</span>
+          <span class="d-none d-sm-inline">&mdash; Building Zimbabwe into a Space Power Hub</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </div>
+        <p class="mb-0">&copy; 2026 ZINGSA. All rights reserved. (Preview build)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({ duration: 700, once: true, offset: 80, disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches });
+    });
+  </script>
+  <script src="../static/js/zingsa-nav.js"></script>
+  <script src="../static/js/zingsa-hero.js"></script>
+</body>
+</html>

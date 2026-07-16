@@ -1,0 +1,23 @@
+{% load static %}
+<!-- ==========================================================================
+     Footer stub — MINIMAL placeholder only.
+     A full, rich footer (sitemap columns, socials, newsletter, partner
+     logos, etc.) is planned for a later phase. Keep this lightweight.
+     ========================================================================== -->
+<footer class="zn-footer-stub">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start">
+      <div class="d-flex align-items-center gap-2">
+        <img src="{% static 'images/zingsa-logo.png' %}" alt="ZINGSA emblem" width="28" height="28" class="rounded-circle">
+        <span class="fw-bold text-white">ZINGSA</span>
+        <span class="d-none d-sm-inline">&mdash; Building Zimbabwe into a Space Power Hub</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'services' %}">Services</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </div>
+      <p class="mb-0">&copy; 2026 ZINGSA. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

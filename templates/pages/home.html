@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}ZINGSA &mdash; Zimbabwe National Geospatial and Space Agency{% endblock %}
+
+{% block meta_description %}The Zimbabwe National Geospatial and Space Agency: satellites, drones, and geospatial intelligence in service of national development.{% endblock %}
+
+{% block body_class %}zn-page-home{% endblock %}
+
+{% block content %}
+
+  {% include "sections/hero_home.html" %}
+
+  {# ========================================================================
+     PHASE 2+ PLACEHOLDER
+     Mission/pillars, satellite programme highlights, interactive map,
+     news grid, and full footer are intentionally OUT OF SCOPE for Phase 1.
+     The anchor below exists only so the hero's scroll indicator has a
+     landing target; replace/expand this section in the next phase.
+     ======================================================================== #}
+  <section id="story" class="py-5" aria-label="More content coming in the next phase">
+    <div class="container py-5 text-center text-secondary">
+      <p class="mb-0">
+        <i class="bi bi-cone-striped me-2" aria-hidden="true"></i>
+        The rest of the homepage (mission, programmes, map, news) arrives in Phase 2.
+      </p>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'js/zingsa-hero.js' %}"></script>
+{% endblock %}

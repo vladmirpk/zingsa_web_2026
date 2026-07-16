@@ -1,0 +1,197 @@
+{% load static %}
+<!-- ==========================================================================
+     Header: utility top bar + sticky main navigation
+     Navbar starts transparent over the hero and turns solid on scroll
+     (see .zn-navbar / .is-scrolled in zingsa.css, toggled by zingsa-nav.js).
+     ========================================================================== -->
+<header class="zn-header">
+
+  <!-- Utility top bar -->
+  <div class="zn-topbar d-none d-lg-flex align-items-center">
+    <div class="container-fluid" style="max-width: var(--zn-container-max);">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+          <span class="zn-topbar__item">
+            <i class="bi bi-telephone me-1" aria-hidden="true"></i>
+            <a href="tel:+2638677009885">+263 8677009885</a>
+          </span>
+          <span class="zn-topbar__item">
+            <i class="bi bi-envelope me-1" aria-hidden="true"></i>
+            <a href="mailto:publicrelations@zingsa.ac.zw">publicrelations@zingsa.ac.zw</a>
+          </span>
+          <span class="zn-topbar__item">
+            <i class="bi bi-clock me-1" aria-hidden="true"></i>
+            Mon&ndash;Fri, 8am&ndash;4pm
+          </span>
+        </div>
+        <a href="{% url 'contact' %}" class="zn-topbar__cta text-decoration-none">
+          Contact Us <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main navigation -->
+  <nav class="zn-navbar is-on-hero" data-zn-navbar aria-label="Primary">
+    <div class="zn-navbar__inner">
+
+      <a href="{% url 'home' %}" class="zn-brand">
+        <img src="{% static 'images/zingsa-logo.png' %}" alt="ZINGSA emblem" class="zn-brand__mark">
+        <span class="zn-brand__text">
+          <span class="zn-brand__title">ZINGSA</span>
+          <span class="zn-brand__subtitle">Geospatial &amp; Space Agency</span>
+        </span>
+      </a>
+
+      <!-- Desktop primary nav -->
+      <ul class="zn-nav" role="menubar">
+        <li class="zn-nav__item" role="none">
+          <a href="{% url 'home' %}" class="zn-nav__link" role="menuitem" aria-current="page">Home</a>
+        </li>
+
+        <li class="zn-nav__item" data-zn-nav-item="about" role="none">
+          <a href="{% url 'about' %}" class="zn-nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            About <i class="bi bi-chevron-down zn-nav__chevron" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li class="zn-nav__item" data-zn-nav-item="programmes" role="none">
+          <a href="{% url 'programmes' %}" class="zn-nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Programmes <i class="bi bi-chevron-down zn-nav__chevron" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li class="zn-nav__item" data-zn-nav-item="services" role="none">
+          <a href="{% url 'services' %}" class="zn-nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Services &amp; Projects <i class="bi bi-chevron-down zn-nav__chevron" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li class="zn-nav__item" data-zn-nav-item="media" role="none">
+          <a href="{% url 'news' %}" class="zn-nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Media &amp; Education <i class="bi bi-chevron-down zn-nav__chevron" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li class="zn-nav__item" role="none">
+          <a href="{% url 'contact' %}" class="zn-nav__link" role="menuitem">Contact</a>
+        </li>
+      </ul>
+
+      <div class="zn-nav__actions">
+        <a href="{% url 'services' %}#book" class="zn-btn zn-btn-gold zn-btn-sm d-none d-xl-inline-flex">
+          <i class="bi bi-calendar-check" aria-hidden="true"></i> Book a Service
+        </a>
+        <button class="zn-nav__toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#znMobileNav" aria-controls="znMobileNav" aria-label="Open menu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    {% include "partials/mega_menu.html" %}
+  </nav>
+</header>
+
+<!-- ==========================================================================
+     Mobile navigation: Bootstrap Offcanvas + Accordion.
+     Deliberately NOT a full-width desktop mega panel on any breakpoint.
+     ========================================================================== -->
+<div class="offcanvas offcanvas-end zn-offcanvas" tabindex="-1" id="znMobileNav" aria-labelledby="znMobileNavLabel">
+  <div class="offcanvas-header">
+    <span class="zn-brand" id="znMobileNavLabel">
+      <img src="{% static 'images/zingsa-logo.png' %}" alt="ZINGSA emblem" class="zn-brand__mark" style="width:36px;height:36px;">
+      <span class="zn-brand__text">
+        <span class="zn-brand__title">ZINGSA</span>
+      </span>
+    </span>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="accordion zn-accordion" id="znMobileAccordion">
+
+      <a class="zn-accordion-link fw-bold" href="{% url 'home' %}">Home</a>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#znmAbout">About</button>
+        </h2>
+        <div id="znmAbout" class="accordion-collapse collapse" data-bs-parent="#znMobileAccordion">
+          <div class="accordion-body">
+            <a class="zn-accordion-link" href="{% url 'about' %}#overview">Overview</a>
+            <a class="zn-accordion-link" href="{% url 'leadership' %}">Leadership</a>
+            <a class="zn-accordion-link" href="{% url 'about' %}#mandate">Mandate &amp; Legal</a>
+            <a class="zn-accordion-link" href="{% url 'nsdi' %}">NSDI Framework</a>
+            <a class="zn-accordion-link" href="{% url 'about' %}#partners">Partnerships</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#znmProgrammes">Programmes</button>
+        </h2>
+        <div id="znmProgrammes" class="accordion-collapse collapse" data-bs-parent="#znMobileAccordion">
+          <div class="accordion-body">
+            <small class="d-block mt-1">Space Science</small>
+            <a class="zn-accordion-link" href="{% url 'space_weather' %}">Space Weather &amp; Ionosphere</a>
+            <a class="zn-accordion-link" href="{% url 'programmes' %}#zimsat">ZIMSAT Satellite Missions</a>
+            <a class="zn-accordion-link" href="{% url 'programmes' %}#cubesat">CubeSat Development</a>
+            <small class="d-block mt-2">Earth Observation</small>
+            <a class="zn-accordion-link" href="{% url 'earth_observation' %}">Imagery &amp; Mapping</a>
+            <a class="zn-accordion-link" href="{% url 'programmes' %}#agro">Agro-Ecological Zones</a>
+            <a class="zn-accordion-link" href="{% url 'programmes' %}#wetlands">Wetlands Mapping</a>
+            <small class="d-block mt-2">GIS &amp; Geospatial</small>
+            <a class="zn-accordion-link" href="{% url 'nsdi' %}">National Spatial Data Infrastructure</a>
+            <a class="zn-accordion-link" href="{% url 'cors' %}">CORS Network</a>
+            <a class="zn-accordion-link" href="{% url 'nsdi' %}#mapping">National Mapping</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#znmServices">Services &amp; Projects</button>
+        </h2>
+        <div id="znmServices" class="accordion-collapse collapse" data-bs-parent="#znMobileAccordion">
+          <div class="accordion-body">
+            <small class="d-block mt-1">Services</small>
+            <a class="zn-accordion-link" href="{% url 'services' %}#drone-spraying">Drone Crop Spraying</a>
+            <a class="zn-accordion-link" href="{% url 'services' %}#survey">Survey &amp; GNSS Positioning</a>
+            <a class="zn-accordion-link" href="{% url 'services' %}#imagery">Imagery &amp; Mapping Products</a>
+            <a class="zn-accordion-link" href="{% url 'services' %}#book">Book a Service</a>
+            <small class="d-block mt-2">Projects</small>
+            <a class="zn-accordion-link" href="{% url 'research' %}">Research &amp; Innovation</a>
+            <a class="zn-accordion-link" href="{% url 'projects' %}#ground-stations">Ground Stations &amp; Mission Control</a>
+            <a class="zn-accordion-link" href="{% url 'projects' %}">Current Projects</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#znmMedia">Media &amp; Education</button>
+        </h2>
+        <div id="znmMedia" class="accordion-collapse collapse" data-bs-parent="#znMobileAccordion">
+          <div class="accordion-body">
+            <small class="d-block mt-1">Media</small>
+            <a class="zn-accordion-link" href="{% url 'news' %}">News &amp; Announcements</a>
+            <a class="zn-accordion-link" href="{% url 'gallery' %}">Gallery</a>
+            <a class="zn-accordion-link" href="{% url 'events' %}">Events &amp; Outreach</a>
+            <small class="d-block mt-2">Education</small>
+            <a class="zn-accordion-link" href="{% url 'education' %}">School Outreach Programme</a>
+            <a class="zn-accordion-link" href="{% url 'careers' %}">Careers &amp; Training</a>
+            <a class="zn-accordion-link" href="{% url 'resources' %}">Resources &amp; FAQ</a>
+          </div>
+        </div>
+      </div>
+
+      <a class="zn-accordion-link fw-bold" href="{% url 'contact' %}">Contact</a>
+
+      <div class="zn-offcanvas-cta">
+        <a href="{% url 'services' %}#book" class="zn-btn zn-btn-gold w-100 justify-content-center">
+          <i class="bi bi-calendar-check" aria-hidden="true"></i> Book a Service
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

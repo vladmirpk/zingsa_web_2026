@@ -1,0 +1,114 @@
+{% load static %}
+<!-- ==========================================================================
+     Hero Section — homepage, first viewport only (Phase 1 scope)
+     Immersive full-viewport hero with real ZINGSA imagery, animated dark
+     gradient overlay, subtle floating particles, agency badge, headline,
+     dual CTAs, quick links, animated stat counters, and a UI-only search
+     bar. Designed to sit directly under the transparent navbar.
+     ========================================================================== -->
+<section class="zn-hero" id="home-hero" aria-label="ZINGSA introduction">
+
+  <!-- Background image: real ZINGSA photo — Mazowe ground station satellite
+       dish with an engineer performing maintenance, Zimbabwe. -->
+  <div class="zn-hero__media">
+    <img
+      src="{% static 'images/hero-mazowe-ground-station.jpg' %}"
+      alt="ZINGSA engineer performing maintenance on the satellite ground station dish at the Mazowe Space Centre, Zimbabwe"
+      loading="eager"
+    >
+  </div>
+
+  <!-- Animated dark gradient overlay -->
+  <div class="zn-hero__overlay" aria-hidden="true"></div>
+
+  <!-- Subtle floating particles (populated by zingsa-hero.js, CSS-driven) -->
+  <div class="zn-hero__particles" data-zn-particles aria-hidden="true"></div>
+
+  <div class="zn-hero__content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-10">
+
+          <span class="zn-hero__badge" data-aos="fade-up" data-aos-duration="600">
+            <span class="zn-dot" aria-hidden="true"></span>
+            Zimbabwe National Geospatial &amp; Space Agency
+          </span>
+
+          <h1 class="zn-hero__headline" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+            Space science, <span class="zn-accent">in service</span> of the nation
+          </h1>
+
+          <p class="zn-hero__sub" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+            From satellites in orbit to drones over farmland, ZINGSA applies space and
+            geospatial technology to agriculture, planning, and Zimbabwe&rsquo;s
+            industrialization &mdash; proudly Zimbabwean, scientifically rigorous.
+          </p>
+
+          <div class="zn-hero__ctas" data-aos="fade-up" data-aos-duration="700" data-aos-delay="220">
+            <a href="{% url 'about' %}" class="zn-btn zn-btn-gold">
+              Explore ZINGSA <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="{% url 'programmes' %}" class="zn-btn zn-btn-glass">
+              Our Programmes <i class="bi bi-rocket-takeoff" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Quick links row -->
+          <nav class="zn-hero__quicklinks" aria-label="Quick links" data-aos="fade-up" data-aos-duration="700" data-aos-delay="280">
+            <a class="zn-quicklink" href="{% url 'services' %}#drone-spraying">
+              <i class="bi bi-airplane" aria-hidden="true"></i> Drone Services
+            </a>
+            <a class="zn-quicklink" href="{% url 'cors' %}">
+              <i class="bi bi-broadcast" aria-hidden="true"></i> CORS Network
+            </a>
+            <a class="zn-quicklink" href="{% url 'space_weather' %}">
+              <i class="bi bi-cloud-lightning" aria-hidden="true"></i> Space Weather
+            </a>
+            <a class="zn-quicklink" href="{% url 'nsdi' %}">
+              <i class="bi bi-diagram-3" aria-hidden="true"></i> NSDI
+            </a>
+          </nav>
+
+          <!-- Search bar (UI only — action is a placeholder Django URL name) -->
+          <form class="zn-hero__search" role="search" action="{% url 'search' %}" method="get" data-zn-hero-search data-aos="fade-up" data-aos-duration="700" data-aos-delay="340">
+            <div class="zn-search-form">
+              <i class="bi bi-search zn-search-form__icon" aria-hidden="true"></i>
+              <label for="heroSearchInput" class="visually-hidden">Search ZINGSA</label>
+              <input type="search" id="heroSearchInput" name="q" placeholder="Search programmes, services, news&hellip;" autocomplete="off">
+              <button type="submit" class="zn-btn zn-btn-gold zn-btn-sm">
+                Search
+              </button>
+            </div>
+          </form>
+
+          <!-- Animated stats -->
+          <div class="zn-hero__stats" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+            <div class="zn-stat">
+              <span class="zn-stat__value"><span data-zn-counter="2">0</span><span class="zn-stat__suffix">+</span></span>
+              <span class="zn-stat__label">Satellites in Orbit</span>
+            </div>
+            <div class="zn-stat">
+              <span class="zn-stat__value"><span data-zn-counter="5">0</span></span>
+              <span class="zn-stat__label">Specialised Divisions</span>
+            </div>
+            <div class="zn-stat">
+              <span class="zn-stat__value"><span data-zn-counter="10">0</span><span class="zn-stat__suffix">yrs</span></span>
+              <span class="zn-stat__label">Since Establishment</span>
+            </div>
+            <div class="zn-stat">
+              <span class="zn-stat__value"><span data-zn-counter="24">0</span><span class="zn-stat__suffix">/7</span></span>
+              <span class="zn-stat__label">CORS Network Uptime</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a href="#story" class="zn-scroll-indicator" aria-label="Scroll to explore">
+    <span class="zn-scroll-indicator__mouse" aria-hidden="true"></span>
+    Scroll
+  </a>
+</section>
