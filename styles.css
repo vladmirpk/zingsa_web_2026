@@ -616,11 +616,11 @@ ul {
 .hero--split-active {
   align-items: stretch;
   justify-content: center;
-  background: #020814;
+  background: var(--paper);
 }
 
 .hero--split-active .hero__media {
-  background: #020814;
+  background: var(--paper);
 }
 
 .hero--split-active .hero__content {
@@ -650,7 +650,7 @@ ul {
 /* White-left capability collage — keep the graphic on the right in frame */
 .hero__slide--home,
 .hero__slide--pilots {
-  object-position: center center;
+  object-position: right center;
 }
 
 /* Space weather cinematic — keep Sun + observatories balanced */
@@ -675,7 +675,7 @@ ul {
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(0deg, rgba(2, 8, 20, 0.82) 0%, rgba(2, 8, 20, 0.48) 42%, rgba(2, 8, 20, 0.32) 100%);
+    linear-gradient(90deg, rgba(2, 8, 20, 0.82) 0%, rgba(2, 8, 20, 0.5) 44%, rgba(2, 8, 20, 0.18) 72%, transparent 100%);
   opacity: 1;
   transition: opacity 0.6s var(--ease);
 }
@@ -683,15 +683,14 @@ ul {
 .hero--split-active .hero__veil {
   opacity: 1;
   background:
-    linear-gradient(0deg, rgba(2, 8, 20, 0.82) 0%, rgba(2, 8, 20, 0.48) 42%, rgba(2, 8, 20, 0.32) 100%);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 40%, rgba(255, 255, 255, 0.22) 62%, transparent 100%);
 }
 
 .hero__dots {
   position: absolute;
   z-index: 4;
-  left: 50%;
+  left: 1.5rem;
   bottom: 1.35rem;
-  transform: translateX(-50%);
   display: flex;
   gap: 0.5rem;
 }
@@ -712,11 +711,11 @@ ul {
 }
 
 .hero--split-active .hero__dot {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(10, 10, 10, 0.2);
 }
 
 .hero--split-active .hero__dot.is-active {
-  background: #fff;
+  background: var(--accent);
 }
 
 .hero__content {
@@ -728,25 +727,25 @@ ul {
   padding: 2rem 1.5rem 3.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .hero__copy {
-  max-width: 40rem;
+  max-width: 36rem;
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
   transition: opacity 0.55s var(--ease), transform 0.55s var(--ease), visibility 0.55s;
   position: absolute;
-  inset: 0;
+  inset: 0 auto auto 0;
   width: 100%;
-  max-width: 40rem;
-  margin: 0 auto;
+  max-width: 36rem;
+  margin: 0;
   height: fit-content;
   pointer-events: none;
-  text-align: center;
+  text-align: left;
 }
 
 .hero__copy.is-active {
@@ -755,17 +754,17 @@ ul {
   transform: translateY(0);
   position: relative;
   pointer-events: auto;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .hero__copy--split {
-  max-width: 40rem;
+  max-width: 24rem;
 }
 
 .hero__content .btn-group,
 .hero__copy .btn-group {
   margin-top: 1.25rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .hero__brand {
@@ -783,7 +782,7 @@ ul {
   font-weight: 600;
   font-style: normal;
   max-width: 36rem;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -794,45 +793,56 @@ ul {
 .hero__sub {
   font-size: clamp(0.95rem, 1.4vw, 1.08rem);
   max-width: 34rem;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
 }
 
 .hero__copy--split .hero__brand {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
 }
 
 .hero__copy--split .hero__headline {
-  color: #fff;
+  color: var(--ink);
   font-size: clamp(2rem, 4.5vw, 3.35rem);
 }
 
 .hero__copy--split .hero__sub {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--ink-soft);
 }
 
 .hero--split-active .hero__copy .btn--navy-outline {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.55);
+  color: var(--accent);
+  border-color: rgba(0, 51, 102, 0.45);
 }
 
 .hero--split-active .hero__copy .btn--navy-outline:hover {
-  background: #fff;
-  color: var(--accent);
-  border-color: #fff;
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.hero--split-active .hero__copy .btn--ghost {
+  color: var(--ink);
+  border-color: rgba(10, 10, 10, 0.45);
+}
+
+.hero--split-active .hero__copy .btn--ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
 }
 
 .page-hero__content .eyebrow,
 .portal-hero__content .eyebrow {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 
 .page-hero__content .btn-group,
 .portal-hero__content .btn-group {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 @keyframes heroFadeUp {
@@ -883,7 +893,7 @@ ul {
 .page-hero__veil {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0.28) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.48) 45%, rgba(0, 0, 0, 0.15) 72%, transparent 100%);
 }
 
 .page-hero__content {
@@ -895,10 +905,10 @@ ul {
   padding: 2rem 1.5rem 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .page-hero__content .display {
@@ -910,17 +920,17 @@ ul {
 .page-hero__content p {
   color: rgba(255, 255, 255, 0.85);
   max-width: 34rem;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 
 .page-hero--pilots .page-hero__media img {
   object-fit: cover;
-  object-position: center center;
+  object-position: right center;
 }
 
 .page-hero--pilots .page-hero__veil {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.48) 42%, rgba(0, 0, 0, 0.25) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.48) 42%, rgba(0, 0, 0, 0.12) 68%, transparent 100%);
 }
 
 .page-hero--pilots {
@@ -2698,8 +2708,7 @@ ul {
   }
 
   .hero__dots {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 1.25rem;
     bottom: 1rem;
   }
 
@@ -3359,7 +3368,7 @@ ul {
 .portal-hero__veil {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0.28) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.48) 45%, rgba(0, 0, 0, 0.15) 72%, transparent 100%);
 }
 
 .portal-hero__content {
@@ -3371,22 +3380,22 @@ ul {
   padding: 2rem 1.5rem 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .portal-hero__content .display {
   color: #fff;
-  margin: 0.35rem auto 0.75rem;
+  margin: 0.35rem 0 0.75rem;
   max-width: 36rem;
 }
 
 .portal-hero__content p {
   color: rgba(255, 255, 255, 0.82);
   max-width: 36rem;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 
