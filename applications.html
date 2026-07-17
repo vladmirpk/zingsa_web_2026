@@ -92,6 +92,30 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Secondary / quick nav -->
+  <nav class="subnav" aria-label="Quick links">
+    <div class="subnav__inner">
+      <ul class="subnav__list">
+        <li><a href="index.html#lifeline" class="subnav__link">Our Story</a></li>
+        <li><a href="divisions.html" class="subnav__link">Divisions</a></li>
+        <li><a href="programs.html" class="subnav__link">Programs</a></li>
+        <li><a href="services.html#drone-spraying" class="subnav__link">Drones</a></li>
+        <li><a href="applications.html" class="subnav__link is-active" aria-current="page">Applications</a></li>
+        <li><a href="nsdi.html" class="subnav__link">NSDI</a></li>
+        <li><a href="cors.html" class="subnav__link">CORS</a></li>
+        <li><a href="space-weather.html" class="subnav__link">Space Weather</a></li>
+        <li><a href="news.html" class="subnav__link">News</a></li>
+        <li><a href="resources.html" class="subnav__link">Resources</a></li>
+        <li><a href="gallery.html" class="subnav__link">Gallery</a></li>
+        <li><a href="leadership.html" class="subnav__link">Leadership</a></li>
+        <li><a href="faq.html" class="subnav__link">FAQ</a></li>
+        <li><a href="careers.html" class="subnav__link">Careers</a></li>
+        <li><a href="contact.html" class="subnav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main>
     <section class="page-intro">
       <div class="container page-intro__grid">
@@ -121,6 +145,10 @@
 
     <section class="section" id="agriculture">
       <div class="container">
+        <figure class="page-intro__figure reveal" style="margin-bottom:2rem">
+          <img src="images/zing_home_pilots_.png" alt="ZINGSA drone pilots: over 15 certified pilots, 5,000+ flight hours since 2018">
+          <figcaption>Certified ZINGSA drone pilots delivering precision agriculture and geospatial field operations.</figcaption>
+        </figure>
         <article class="editorial reveal">
           <div class="editorial__media">
             <img src="images/2020-AGRO-ECOLOGICAL-MAP.jpg" alt="Zimbabwe agro-ecological zones map">
@@ -129,10 +157,10 @@
             <p class="eyebrow">Food security</p>
             <h2 class="display display--md">Agriculture &amp; precision farming</h2>
             <p>ZINGSA revised Zimbabwe&#8217;s Agro-Ecological Zones using satellite data so planners and farmers can match crops, inputs, and seasons to local conditions. Earth observation also supports yield estimation, crop health assessment, and soil-moisture insight.</p>
-            <p>Precision agriculture services &#8212; including drone crop spraying &#8212; help farmers apply treatments more efficiently and reduce waste.</p>
+            <p>Precision agriculture services &#8212; including GPS-guided drone crop spraying &#8212; help farmers apply treatments more efficiently and reduce waste, from large commercial operations to small-scale fields.</p>
             <div class="btn-group">
               <a href="programs.html#agro" class="btn btn--navy-outline">Agro-Ecological Zones</a>
-              <a href="services.html#drone-spraying" class="btn btn--outline">Book drone spraying</a>
+              <a href="services.html#precision-farming" class="btn btn--outline">See the spraying workflow</a>
             </div>
           </div>
         </article>
@@ -140,6 +168,13 @@
           <img src="images/Crop_Spraying_Drone_Services.jpeg" alt="Crop spraying service">
           <img src="images/minister_zingsa_drones.jpg" alt="ZINGSA drone demonstration">
           <img src="images/agras.jpg" alt="Precision agriculture drone">
+          <img src="images/zingsa_farmers_drones.jpeg" alt="Farmers observing ZINGSA drone demonstration">
+          <img src="images/zingsa_pilots_in_action.jpeg" alt="ZINGSA drone pilots coordinating field operations">
+        </div>
+        <div class="btn-group reveal" style="margin-top:1.5rem">
+          <a href="services.html#drone-spraying" class="btn btn--primary">Book drone spraying</a>
+          <a href="divisions.html#drone-engineering" class="btn btn--outline">How ZINGSA drones are built</a>
+          <a href="careers.html#human-capital" class="btn btn--navy-outline">GIS &amp; drone courses</a>
         </div>
       </div>
     </section>
@@ -194,6 +229,7 @@
             <p class="eyebrow">Resources</p>
             <h2 class="display display--md">Mining &amp; mineral exploration</h2>
             <p>Geospatial intelligence supports mineral exploration, activity mapping, and environmental compliance around mining operations. Accurate positioning through the CORS network underpins survey work in the field.</p>
+            <p>From first identifying a target to confirming what lies beneath the surface, ZINGSA&#8217;s Earth observation and survey capability supports every stage of the exploration pipeline &#8212; reducing guesswork and helping explorers and regulators work from the same geospatial picture.</p>
             <div class="btn-group">
               <a href="cors.html" class="btn btn--navy-outline">CORS Network</a>
               <a href="divisions.html#geospatial" class="btn btn--outline">Geospatial division</a>
@@ -202,6 +238,45 @@
         </article>
         <div class="program-thumbs reveal" style="margin-top:1.5rem">
           <img src="images/mineral_field_operations.png" alt="ZINGSA field teams supporting mineral survey operations">
+        </div>
+
+        <div class="section-header reveal" id="stages-of-mineral-exploration" style="margin-top:4rem">
+          <p class="eyebrow">How exploration works</p>
+          <h3 class="display display--md">Stages of mineral exploration</h3>
+          <p class="lede">Mineral exploration moves from a wide, space-derived view of the land down to physical evidence in the ground &#8212; four stages where ZINGSA&#8217;s geospatial and Earth observation capability adds accuracy at every step.</p>
+        </div>
+        <figure class="mineral-stages__figure reveal">
+          <button type="button" class="mineral-stages__zoom" data-lightbox="images/stages_of_mineral_exploration.png" data-caption="The four stages of mineral exploration: geological mapping and target identification, remote sensing and geophysical surveys, exploratory drilling, and core sampling and analysis" aria-label="View full-size diagram of the four stages of mineral exploration">
+            <img src="images/stages_of_mineral_exploration.png" alt="Diagram of the four stages of mineral exploration: (1) geological mapping and target identification, (2) remote sensing and geophysical surveys, (3) exploratory drilling, (4) core sampling and analysis">
+          </button>
+          <figcaption>The exploration pipeline, from desktop targeting to core analysis &#8212; select the diagram to view it full-size.</figcaption>
+        </figure>
+        <div class="process-grid reveal-stagger">
+          <article class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">01</span>
+            <h4>Geological mapping &amp; target identification</h4>
+            <p>Existing geological maps, historical records, and satellite imagery are combined to identify structures and formations likely to host mineral deposits, narrowing the search area before any fieldwork begins.</p>
+          </article>
+          <article class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">02</span>
+            <h4>Remote sensing &amp; geophysical surveys</h4>
+            <p>Satellite and aerial imagery, together with geophysical survey techniques, refine the targets identified on the map &#8212; revealing alteration zones, structural trends, and anomalies worth investigating on the ground.</p>
+          </article>
+          <article class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">03</span>
+            <h4>Exploratory drilling</h4>
+            <p>Accurate, CORS-backed positioning guides drilling crews to the precise coordinates identified during remote sensing, so drill holes test the target efficiently and results can be tied back to the geospatial model.</p>
+          </article>
+          <article class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">04</span>
+            <h4>Core sampling &amp; analysis</h4>
+            <p>Drill core is logged, sampled, and analysed to confirm mineral content and grade &#8212; the ground-truth data that validates the exploration model and informs decisions on further investment.</p>
+          </article>
+        </div>
+        <div class="btn-group reveal" style="margin-top:2rem">
+          <a href="services.html#survey" class="btn btn--navy-outline">Survey &amp; GNSS services</a>
+          <a href="cors.html" class="btn btn--outline">CORS positioning</a>
+          <a href="contact.html" class="btn btn--primary">Discuss a project</a>
         </div>
       </div>
     </section>
@@ -244,15 +319,17 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><div class="footer-brand">ZINGSA</div><p>Innovation through space science and technology.</p></div>
+        <div><div class="footer-brand">ZINGSA</div><p>Innovation through space science and technology. Building Zimbabwe into a space power hub.</p></div>
         <div><h4>Quick links</h4><ul>
           <li><a href="applications.html">Applications</a></li>
           <li><a href="space-weather.html">Space Weather</a></li>
           <li><a href="news.html">News</a></li>
+          <li><a href="resources.html">Resources</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="cors.html">CORS</a></li>
         </ul></div>
         <div><h4>Agency</h4><ul>
+          <li><a href="about.html">About</a></li>
           <li><a href="leadership.html">Leadership</a></li>
           <li><a href="divisions.html">Divisions</a></li>
           <li><a href="programs.html">Programs</a></li>

@@ -8,12 +8,69 @@
   const navItems = document.querySelectorAll('.nav-item.has-mega');
   const mqDesktop = window.matchMedia('(min-width: 901px)');
 
+  // Grace period before a mega panel closes on mouseleave, so users can
+  // move the cursor diagonally from the trigger into the panel without
+  // it vanishing. Re-entering (this item or another) cancels the timer.
+  const MEGA_CLOSE_DELAY = 380;
+  let megaCloseTimer = null;
+
   function closeAllMegas() {
+    clearTimeout(megaCloseTimer);
     navItems.forEach((item) => {
       item.classList.remove('is-open');
       const btn = item.querySelector('.nav-link');
       if (btn) btn.setAttribute('aria-expanded', 'false');
+      resetMegaPosition(item);
     });
+  }
+
+  function resetMegaPosition(item) {
+    const mega = item.querySelector('.mega');
+    if (!mega) return;
+    mega.style.left = '';
+    mega.style.right = '';
+  }
+
+  /** Keep desktop mega panels inside the viewport (right-nav items especially). */
+  function positionMega(item) {
+    const mega = item.querySelector('.mega');
+    if (!mega || !mqDesktop.matches) return;
+
+    mega.style.left = '0';
+    mega.style.right = 'auto';
+
+    const pad = 16;
+    const rect = mega.getBoundingClientRect();
+    if (rect.right > window.innerWidth - pad) {
+      mega.style.left = 'auto';
+      mega.style.right = '0';
+    }
+
+    const rect2 = mega.getBoundingClientRect();
+    if (rect2.left < pad) {
+      const itemRect = item.getBoundingClientRect();
+      const width = rect2.width;
+      const maxLeft = window.innerWidth - pad - width;
+      const target = Math.max(pad, Math.min(itemRect.left, maxLeft));
+      mega.style.left = `${Math.round(target - itemRect.left)}px`;
+      mega.style.right = 'auto';
+    }
+  }
+
+  function openMega(item) {
+    const trigger = item.querySelector('.nav-link');
+    navItems.forEach((other) => {
+      if (other !== item) {
+        other.classList.remove('is-open');
+        const b = other.querySelector('.nav-link');
+        if (b) b.setAttribute('aria-expanded', 'false');
+        resetMegaPosition(other);
+      }
+    });
+    item.classList.add('is-open');
+    if (trigger) trigger.setAttribute('aria-expanded', 'true');
+    // Measure after open so width/layout are correct
+    requestAnimationFrame(() => positionMega(item));
   }
 
   function closeMobile() {
@@ -61,37 +118,40 @@
         // Prevent accidental navigation when expanding via keyboard
         if (trigger.getAttribute('aria-expanded') === 'false' && e.detail === 0) {
           e.preventDefault();
-          closeAllMegas();
-          item.classList.add('is-open');
-          trigger.setAttribute('aria-expanded', 'true');
+          openMega(item);
         }
       }
     });
 
-    if (mqDesktop.matches || true) {
-      item.addEventListener('mouseenter', () => {
-        if (!mqDesktop.matches) return;
-        closeAllMegas();
-        item.classList.add('is-open');
-        trigger.setAttribute('aria-expanded', 'true');
-      });
-      item.addEventListener('mouseleave', () => {
-        if (!mqDesktop.matches) return;
+    item.addEventListener('mouseenter', () => {
+      if (!mqDesktop.matches) return;
+      clearTimeout(megaCloseTimer);
+      openMega(item);
+    });
+    item.addEventListener('mouseleave', () => {
+      if (!mqDesktop.matches) return;
+      clearTimeout(megaCloseTimer);
+      megaCloseTimer = setTimeout(() => {
         item.classList.remove('is-open');
         trigger.setAttribute('aria-expanded', 'false');
-      });
-    }
+        resetMegaPosition(item);
+      }, MEGA_CLOSE_DELAY);
+    });
 
     trigger.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         const willOpen = !item.classList.contains('is-open');
         closeAllMegas();
-        if (willOpen) {
-          item.classList.add('is-open');
-          trigger.setAttribute('aria-expanded', 'true');
-        }
+        if (willOpen) openMega(item);
       }
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (!mqDesktop.matches) return;
+    navItems.forEach((item) => {
+      if (item.classList.contains('is-open')) positionMega(item);
     });
   });
 
@@ -176,6 +236,7 @@
   });
 
   // Hero crossfade — image + copy together
+  const heroSection = document.querySelector('.hero');
   const heroSlides = document.querySelectorAll('[data-hero-slides] .hero__slide');
   const heroPanels = document.querySelectorAll('[data-hero-panel]');
   const heroDots = document.querySelectorAll('[data-hero-dot]');
@@ -198,6 +259,13 @@
         dot.classList.toggle('is-active', active);
         dot.setAttribute('aria-selected', active ? 'true' : 'false');
       });
+      if (heroSection) {
+        const activeSlide = heroSlides[heroIndex];
+        heroSection.classList.toggle(
+          'hero--split-active',
+          !!activeSlide && activeSlide.classList.contains('hero__slide--split')
+        );
+      }
     }
 
     function startHeroTimer() {
@@ -212,6 +280,7 @@
       });
     });
 
+    showHero(0);
     startHeroTimer();
   }
 

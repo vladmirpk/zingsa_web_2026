@@ -92,7 +92,31 @@
       </ul>
     </nav>
   </header>
-  <main><main>
+
+  <!-- Secondary / quick nav -->
+  <nav class="subnav" aria-label="Quick links">
+    <div class="subnav__inner">
+      <ul class="subnav__list">
+        <li><a href="index.html#lifeline" class="subnav__link">Our Story</a></li>
+        <li><a href="divisions.html" class="subnav__link">Divisions</a></li>
+        <li><a href="programs.html" class="subnav__link">Programs</a></li>
+        <li><a href="services.html#drone-spraying" class="subnav__link">Drones</a></li>
+        <li><a href="applications.html" class="subnav__link">Applications</a></li>
+        <li><a href="nsdi.html" class="subnav__link">NSDI</a></li>
+        <li><a href="cors.html" class="subnav__link">CORS</a></li>
+        <li><a href="space-weather.html" class="subnav__link">Space Weather</a></li>
+        <li><a href="news.html" class="subnav__link">News</a></li>
+        <li><a href="resources.html" class="subnav__link">Resources</a></li>
+        <li><a href="gallery.html" class="subnav__link is-active" aria-current="page">Gallery</a></li>
+        <li><a href="leadership.html" class="subnav__link">Leadership</a></li>
+        <li><a href="faq.html" class="subnav__link">FAQ</a></li>
+        <li><a href="careers.html" class="subnav__link">Careers</a></li>
+        <li><a href="contact.html" class="subnav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
     <section class="page-intro">
       <div class="container page-intro__grid">
         <div class="page-intro__copy">
@@ -117,6 +141,8 @@
           <button type="button" class="filter-btn" data-filter="launch">Launch</button>
           <button type="button" class="filter-btn" data-filter="outreach">Outreach</button>
           <button type="button" class="filter-btn" data-filter="operations">Operations</button>
+          <button type="button" class="filter-btn" data-filter="training">Training</button>
+          <button type="button" class="filter-btn" data-filter="international">International</button>
         </div>
 
         <div class="mosaic reveal-stagger">
@@ -137,6 +163,21 @@
           <button type="button" class="mosaic__item reveal" data-gallery-item data-category="operations" data-lightbox="images/mineral_exploration_banner.png" data-caption="Mineral exploration survey work"><img src="images/mineral_exploration_banner.png" alt="Mineral exploration"><span>Mineral exploration</span></button>
           <button type="button" class="mosaic__item reveal" data-gallery-item data-category="facilities" data-lightbox="images/dg_with_engineers.JPG" data-caption="ZINGSA team"><img src="images/dg_with_engineers.JPG" alt="Team"><span>ZINGSA team</span></button>
           <button type="button" class="mosaic__item reveal" data-gallery-item data-category="satellites" data-lightbox="images/cubesat_development1.jpg" data-caption="CubeSat development"><img src="images/cubesat_development1.jpg" alt="CubeSat"><span>CubeSat development</span></button>
+          <button type="button" class="mosaic__item mosaic__item--wide reveal" data-gallery-item data-category="operations" data-lightbox="images/zingsa_farmers_drones.jpeg" data-caption="Drone demonstration for farmers"><img src="images/zingsa_farmers_drones.jpeg" alt="Farmers drone demo"><span>Farmers drone demo</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="operations" data-lightbox="images/zingsa_pilots_in_action.jpeg" data-caption="ZINGSA drone pilots in the field"><img src="images/zingsa_pilots_in_action.jpeg" alt="Drone pilots"><span>Drone pilots in action</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="operations" data-lightbox="images/flight_planning.jpeg" data-caption="Flight planning with drone and topographic map"><img src="images/flight_planning.jpeg" alt="Flight planning"><span>Flight planning</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="operations" data-lightbox="images/dg_demostrations.jpeg" data-caption="Director General leading UAV demonstration"><img src="images/dg_demostrations.jpeg" alt="DG demonstration"><span>DG UAV briefing</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="outreach" data-lightbox="images/scientist_exhibitions.jpeg" data-caption="ZINGSA scientists showcasing drone fleet at exhibition"><img src="images/scientist_exhibitions.jpeg" alt="Exhibition"><span>Science exhibitions</span></button>
+          <button type="button" class="mosaic__item mosaic__item--wide reveal" data-gallery-item data-category="facilities" data-lightbox="images/ministry_zingsa.jpeg" data-caption="ZINGSA leadership and ministry team"><img src="images/ministry_zingsa.jpeg" alt="Ministry team"><span>Ministry &amp; leadership team</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="training" data-lightbox="images/in_house_training.jpeg" data-caption="In-house technical training session"><img src="images/in_house_training.jpeg" alt="Training"><span>In-house training</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="training" data-lightbox="images/students_attached_at_work.jpeg" data-caption="Student attachees working with geospatial maps"><img src="images/students_attached_at_work.jpeg" alt="Student attachees"><span>Student attachees</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="training" data-lightbox="images/board_managers_induction.jpeg" data-caption="Board and managers induction"><img src="images/board_managers_induction.jpeg" alt="Board induction"><span>Board induction</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="satellites" data-lightbox="images/shakhit_sat_cube_sat_images.jpeg" data-caption="ShakthiSAT CubeSat prototypes and 3D-printed hardware"><img src="images/shakhit_sat_cube_sat_images.jpeg" alt="CubeSat prototypes"><span>CubeSat prototypes</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="international" data-lightbox="images/patience_scientist_space_engineering_workshop_egypt.jpeg" data-caption="ZINGSA delegation at Egyptian Space Agency workshop"><img src="images/patience_scientist_space_engineering_workshop_egypt.jpeg" alt="Egypt workshop"><span>Egypt space workshop</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="outreach" data-lightbox="images/data_protection_compliance.jpeg" data-caption="ZINGSA receives data protection compliance certificate"><img src="images/data_protection_compliance.jpeg" alt="Data protection award"><span>Data protection award</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="international" data-lightbox="images/patience_muchini_delivers_speech.jpeg" data-caption="Patience Muchini delivering speech at Egyptian Space Agency"><img src="images/patience_muchini_delivers_speech.jpeg" alt="Patience Muchini speech"><span>Speech in Egypt</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="training" data-lightbox="images/egypt_workshop_patience_muchini.jpeg" data-caption="Patience Muchini at Egyptian Space Agency course"><img src="images/egypt_workshop_patience_muchini.jpeg" alt="Egypt course"><span>Satellite systems course</span></button>
+          <button type="button" class="mosaic__item reveal" data-gallery-item data-category="international" data-lightbox="images/shakhit_sat_cube_sat_dev_competition.jpeg" data-caption="Mission ShakthiSAT Zimbabwe selection announcement"><img src="images/shakhit_sat_cube_sat_dev_competition.jpeg" alt="ShakthiSAT announcement"><span>ShakthiSAT programme</span></button>
         </div>
       </div>
     </section>
@@ -144,15 +185,17 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><div class="footer-brand">ZINGSA</div><p>Innovation through space science and technology.</p></div>
+        <div><div class="footer-brand">ZINGSA</div><p>Innovation through space science and technology. Building Zimbabwe into a space power hub.</p></div>
         <div><h4>Quick links</h4><ul>
           <li><a href="applications.html">Applications</a></li>
           <li><a href="space-weather.html">Space Weather</a></li>
           <li><a href="news.html">News</a></li>
+          <li><a href="resources.html">Resources</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="cors.html">CORS</a></li>
         </ul></div>
         <div><h4>Agency</h4><ul>
+          <li><a href="about.html">About</a></li>
           <li><a href="leadership.html">Leadership</a></li>
           <li><a href="divisions.html">Divisions</a></li>
           <li><a href="programs.html">Programs</a></li>

@@ -32,6 +32,9 @@
      --------------------------------------------------------------------- */
   var activeItem = null;
   var closeTimer = null;
+  // Grace period before closing on mouseleave, so users can move the
+  // cursor diagonally from the trigger into the panel without it closing.
+  var MEGA_CLOSE_DELAY = 380;
 
   function getPanel(item) {
     var id = item.getAttribute('data-zn-nav-item');
@@ -107,7 +110,7 @@
     item.addEventListener('mouseleave', function () {
       closeTimer = setTimeout(function () {
         closeMega(item);
-      }, 140);
+      }, MEGA_CLOSE_DELAY);
     });
 
     trigger.addEventListener('click', function (e) {

@@ -92,6 +92,30 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Secondary / quick nav -->
+  <nav class="subnav" aria-label="Quick links">
+    <div class="subnav__inner">
+      <ul class="subnav__list">
+        <li><a href="index.html#lifeline" class="subnav__link">Our Story</a></li>
+        <li><a href="divisions.html" class="subnav__link">Divisions</a></li>
+        <li><a href="programs.html" class="subnav__link">Programs</a></li>
+        <li><a href="services.html#drone-spraying" class="subnav__link">Drones</a></li>
+        <li><a href="applications.html" class="subnav__link">Applications</a></li>
+        <li><a href="nsdi.html" class="subnav__link">NSDI</a></li>
+        <li><a href="cors.html" class="subnav__link">CORS</a></li>
+        <li><a href="space-weather.html" class="subnav__link">Space Weather</a></li>
+        <li><a href="news.html" class="subnav__link is-active" aria-current="page">News</a></li>
+        <li><a href="resources.html" class="subnav__link">Resources</a></li>
+        <li><a href="gallery.html" class="subnav__link">Gallery</a></li>
+        <li><a href="leadership.html" class="subnav__link">Leadership</a></li>
+        <li><a href="faq.html" class="subnav__link">FAQ</a></li>
+        <li><a href="careers.html" class="subnav__link">Careers</a></li>
+        <li><a href="contact.html" class="subnav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main>
     <section class="page-intro">
       <div class="container page-intro__grid">
@@ -116,6 +140,60 @@
           <button type="button" class="filter-btn" data-filter="milestones">Milestones</button>
         </div>
         <div class="news-list">
+          <article class="news-item reveal" data-category="events milestones">
+            <div class="news-item__media"><img src="images/patience_muchini_delivers_speech.jpeg" alt="Ms Patience Muchini delivering a speech at the Egyptian Space Agency"></div>
+            <div>
+              <p class="news-item__date">2026</p>
+              <h3>Patience Muchini selected to speak for delegates at Egyptian Space Agency course</h3>
+              <p>Ms Patience Muchini of ZINGSA&#8217;s Space Engineering Department attended the Introduction to Satellite Systems and Applications Course in Egypt, covering orbital mechanics, satellite subsystems, ground segment operations, and remote sensing applications. Her strong performance and active participation earned her selection to deliver a speech on behalf of all participants &#8212; reflecting on the course, ZINGSA&#8217;s growing programmes, and Zimbabwe&#8217;s space ambitions.</p>
+              <span class="news-item__tag">Events</span>
+            </div>
+          </article>
+          <article class="news-item reveal" data-category="milestones">
+            <div class="news-item__media"><img src="images/shakhit_sat_cube_sat_dev_competition.jpeg" alt="Mission ShakthiSAT Zimbabwe"></div>
+            <div>
+              <p class="news-item__date">2026</p>
+              <h3>Zimbabwean student selected for Mission ShakthiSAT in India</h3>
+              <p>Shalom Makumbirofa from St Augustine High School was selected to represent Zimbabwe in India for the Mission ShakthiSAT CubeSat development programme, a milestone for STEM excellence.</p>
+              <span class="news-item__tag">Milestones</span>
+            </div>
+          </article>
+          <article class="news-item reveal" data-category="milestones">
+            <div class="news-item__media"><img src="images/dg_appointed_board_member_mosi_a_tunya.jpeg" alt="DG appointed board member"></div>
+            <div>
+              <p class="news-item__date">31 December 2025</p>
+              <h3>Director General appointed to Mosi-oa-Tunya Development Company board</h3>
+              <p>ZINGSA Director General P. Gweme was appointed as a new board member of the Mosi-oa-Tunya Development Company, effective December 2025.</p>
+              <span class="news-item__tag">Milestones</span>
+            </div>
+          </article>
+          <article class="news-item reveal" data-category="milestones">
+            <div class="news-item__media"><img src="images/data_protection_compliance.jpeg" alt="Data protection compliance certificate"></div>
+            <div>
+              <p class="news-item__date">2026</p>
+              <h3>ZINGSA receives data protection compliance certificate</h3>
+              <p>ZINGSA was awarded a data protection compliance certificate from POTRAZ, recognising the agency&#8217;s commitment to information security and regulatory standards.</p>
+              <span class="news-item__tag">Milestones</span>
+            </div>
+          </article>
+          <article class="news-item reveal" data-category="events">
+            <div class="news-item__media"><img src="images/patience_scientist_space_engineering_workshop_egypt.jpeg" alt="ZINGSA delegation at Egyptian Space Agency"></div>
+            <div>
+              <p class="news-item__date">2026</p>
+              <h3>ZINGSA strengthens ties with Egyptian Space Agency</h3>
+              <p>A ZINGSA delegation participated in satellite systems training at the Egyptian Space Agency &#8212; part of the agency&#8217;s human capital development and international partnership work in space engineering.</p>
+              <span class="news-item__tag">Events</span>
+            </div>
+          </article>
+          <article class="news-item reveal" data-category="outreach">
+            <div class="news-item__media"><img src="images/zingsa_farmers_drones.jpeg" alt="Drone demonstration for farmers"></div>
+            <div>
+              <p class="news-item__date">2026</p>
+              <h3>Field day brings drone technology to farmers</h3>
+              <p>ZINGSA hosted a field day demonstration showcasing agricultural drone technology, connecting space-derived innovation with farmers in the field.</p>
+              <span class="news-item__tag">Outreach</span>
+            </div>
+          </article>
           <article class="news-item reveal" data-category="outreach">
             <div class="news-item__media"><img src="images/outreach3.jpg" alt="School STEM outreach"></div>
             <div>
@@ -195,15 +273,17 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><div class="footer-brand">ZINGSA</div><p>Innovation through space science and technology.</p></div>
+        <div><div class="footer-brand">ZINGSA</div><p>Innovation through space science and technology. Building Zimbabwe into a space power hub.</p></div>
         <div><h4>Quick links</h4><ul>
           <li><a href="applications.html">Applications</a></li>
           <li><a href="space-weather.html">Space Weather</a></li>
           <li><a href="news.html">News</a></li>
+          <li><a href="resources.html">Resources</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="cors.html">CORS</a></li>
         </ul></div>
         <div><h4>Agency</h4><ul>
+          <li><a href="about.html">About</a></li>
           <li><a href="leadership.html">Leadership</a></li>
           <li><a href="divisions.html">Divisions</a></li>
           <li><a href="programs.html">Programs</a></li>

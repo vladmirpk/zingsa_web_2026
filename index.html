@@ -200,48 +200,93 @@
     </nav>
   </header>
 
+  <!-- Secondary / quick nav -->
+  <nav class="subnav" aria-label="Quick links">
+    <div class="subnav__inner">
+      <ul class="subnav__list">
+        <li><a href="index.html#lifeline" class="subnav__link">Our Story</a></li>
+        <li><a href="divisions.html" class="subnav__link">Divisions</a></li>
+        <li><a href="programs.html" class="subnav__link">Programs</a></li>
+        <li><a href="services.html#drone-spraying" class="subnav__link">Drones</a></li>
+        <li><a href="applications.html" class="subnav__link">Applications</a></li>
+        <li><a href="nsdi.html" class="subnav__link">NSDI</a></li>
+        <li><a href="cors.html" class="subnav__link">CORS</a></li>
+        <li><a href="space-weather.html" class="subnav__link">Space Weather</a></li>
+        <li><a href="news.html" class="subnav__link">News</a></li>
+        <li><a href="resources.html" class="subnav__link">Resources</a></li>
+        <li><a href="gallery.html" class="subnav__link">Gallery</a></li>
+        <li><a href="leadership.html" class="subnav__link">Leadership</a></li>
+        <li><a href="faq.html" class="subnav__link">FAQ</a></li>
+        <li><a href="careers.html" class="subnav__link">Careers</a></li>
+        <li><a href="contact.html" class="subnav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main>
     <!-- Hero -->
-    <section class="hero" id="home" aria-label="ZINGSA introduction">
+    <section class="hero hero--split-active" id="home" aria-label="ZINGSA introduction">
       <div class="hero__media" data-hero-slides>
-        <img class="hero__slide is-active" src="images/hero_background.png" alt="ZINGSA space technology, Earth observation, and national development">
-        <img class="hero__slide" src="images/background.png" alt="Zimbabwe highlighted from space with satellite and drone technology">
-        <img class="hero__slide" src="images/Crop_Spraying_Drone_Services.jpeg" alt="ZINGSA drone pilot conducting precision crop spraying over Zimbabwe farmland">
+        <img class="hero__slide hero__slide--home hero__slide--split is-active" src="images/zingsa_home.png" alt="ZINGSA space and geospatial capability: satellite, drone, mapping, and mission control">
+        <img class="hero__slide hero__slide--pilots hero__slide--split" src="images/zing_home_pilots_.png" alt="ZINGSA drone pilots: over 15 certified pilots, 5,000+ flight hours since 2018">
+        <img class="hero__slide hero__slide--weather" src="images/space_weather.png" alt="Space weather: Sun, Earth, aurora, satellite, and ground observatories">
+        <img class="hero__slide hero__slide--sat" src="images/zingsa_sat_home.png" alt="ZINGSA mission control with satellite tracking and Earth observation displays">
+        <img class="hero__slide" src="images/zingsa_home_hero.png" alt="ZINGSA headquarters and national geospatial operations">
       </div>
       <div class="hero__veil" aria-hidden="true"></div>
       <div class="hero__content" data-hero-copy>
-        <div class="hero__copy is-active" data-hero-panel="0">
+        <div class="hero__copy hero__copy--split is-active" data-hero-panel="0">
           <p class="hero__brand">ZINGSA</p>
-          <h1 class="hero__headline">Space science for national development</h1>
-          <p class="hero__sub">The Zimbabwe National Geospatial and Space Agency &#8212; peaceful use of space, applied for agriculture, planning, and industrialization.</p>
+          <h1 class="hero__headline">Zimbabwe, seen whole.</h1>
+          <p class="hero__sub">From orbit to the field &#8212; satellites, drones, and geospatial intelligence turning space into decisions on the ground.</p>
           <div class="btn-group">
-            <a href="about.html" class="btn btn--primary">Explore ZINGSA</a>
-            <a href="programs.html" class="btn btn--ghost">Our programs</a>
+            <a href="#lifeline" class="btn btn--primary">Explore the story</a>
+            <a href="about.html" class="btn btn--navy-outline">About us</a>
           </div>
         </div>
-        <div class="hero__copy" data-hero-panel="1" aria-hidden="true">
-          <p class="hero__brand">ZINGSA</p>
-          <h1 class="hero__headline">Zimbabwe seen from orbit</h1>
-          <p class="hero__sub">Satellites, drones, and ground stations working together &#8212; geospatial intelligence that informs farming, planning, and national resilience.</p>
+        <div class="hero__copy hero__copy--split" data-hero-panel="1" aria-hidden="true">
+          <p class="hero__brand">ZINGSA Drone Pilots</p>
+          <h1 class="hero__headline">Skilled. Certified. Committed to precision.</h1>
+          <p class="hero__sub">Over 15 certified pilots, 5,000+ flight hours since 2018, and six years of proven results in precision agriculture and geospatial field operations.</p>
           <div class="btn-group">
-            <a href="about.html" class="btn btn--primary">Explore ZINGSA</a>
-            <a href="programs.html" class="btn btn--ghost">Our programs</a>
+            <a href="services.html#drone-spraying" class="btn btn--primary">Book drone spraying</a>
+            <a href="careers.html#human-capital" class="btn btn--ghost">Drone training</a>
           </div>
         </div>
         <div class="hero__copy" data-hero-panel="2" aria-hidden="true">
-          <p class="hero__brand">ZINGSA</p>
-          <h1 class="hero__headline">Precision drones for smarter farming</h1>
-          <p class="hero__sub">GPS-guided aerial spraying and field intelligence &#8212; helping Zimbabwe&#8217;s farmers protect yields with ZINGSA&#8217;s drone crop spraying service.</p>
+          <p class="hero__brand">Space Weather</p>
+          <h1 class="hero__headline">Watching the Sun. Protecting the signal.</h1>
+          <p class="hero__sub">Monitoring how solar activity and the near-Earth environment affect GNSS, communications, and critical infrastructure over Zimbabwe.</p>
           <div class="btn-group">
-            <a href="services.html#drone-spraying" class="btn btn--primary">Book drone spraying</a>
-            <a href="services.html" class="btn btn--ghost">All services</a>
+            <a href="space-weather.html" class="btn btn--primary">Space Weather</a>
+            <a href="cors.html" class="btn btn--ghost">CORS network</a>
+          </div>
+        </div>
+        <div class="hero__copy" data-hero-panel="3" aria-hidden="true">
+          <p class="hero__brand">Mission control</p>
+          <h1 class="hero__headline">Eyes on orbit. Hands on the mission.</h1>
+          <p class="hero__sub">From satellite tracking to Earth observation &#8212; ZINGSA&#8217;s operations team turns live space data into national insight, every day.</p>
+          <div class="btn-group">
+            <a href="divisions.html#space-operations" class="btn btn--primary">Space Operations</a>
+            <a href="programs.html" class="btn btn--ghost">Our programs</a>
+          </div>
+        </div>
+        <div class="hero__copy" data-hero-panel="4" aria-hidden="true">
+          <p class="hero__brand">ZINGSA</p>
+          <h1 class="hero__headline">Innovation starts here.</h1>
+          <p class="hero__sub">From our headquarters in Harare, ZINGSA engineers, scientists, and pilots deliver space capability for every corner of Zimbabwe.</p>
+          <div class="btn-group">
+            <a href="about.html" class="btn btn--primary">About ZINGSA</a>
+            <a href="gallery.html" class="btn btn--ghost">Photo gallery</a>
           </div>
         </div>
       </div>
       <div class="hero__dots" role="tablist" aria-label="Hero slides">
-        <button type="button" class="hero__dot is-active" aria-label="Slide 1" aria-selected="true" data-hero-dot="0"></button>
-        <button type="button" class="hero__dot" aria-label="Slide 2" aria-selected="false" data-hero-dot="1"></button>
-        <button type="button" class="hero__dot" aria-label="Slide 3" aria-selected="false" data-hero-dot="2"></button>
+        <button type="button" class="hero__dot is-active" aria-label="Capability" aria-selected="true" data-hero-dot="0"></button>
+        <button type="button" class="hero__dot" aria-label="Drone pilots" aria-selected="false" data-hero-dot="1"></button>
+        <button type="button" class="hero__dot" aria-label="Space Weather" aria-selected="false" data-hero-dot="2"></button>
+        <button type="button" class="hero__dot" aria-label="Mission control" aria-selected="false" data-hero-dot="3"></button>
+        <button type="button" class="hero__dot" aria-label="Headquarters" aria-selected="false" data-hero-dot="4"></button>
       </div>
     </section>
 
@@ -321,7 +366,7 @@
               <span class="story-step__link">Book drone spraying &#8594;</span>
             </a>
 
-            <a class="story-step reveal" href="applications.html#mining">
+            <a class="story-step reveal" href="applications.html#stages-of-mineral-exploration">
               <div class="story-step__head">
                 <span class="story-step__num">06</span>
                 <span class="story-step__line" aria-hidden="true"></span>
@@ -330,21 +375,21 @@
                 <img src="images/mineral_field_operations.png" alt="Field teams and drones supporting mineral exploration survey work">
               </div>
               <h3 class="story-step__title">Beneath the surface</h3>
-              <p class="story-step__desc">Field teams and drones support mineral exploration, survey, and environmental compliance.</p>
-              <span class="story-step__link">Mining &amp; minerals &#8594;</span>
+              <p class="story-step__desc">From geological mapping to core analysis, geospatial data guides every stage of mineral exploration.</p>
+              <span class="story-step__link">Stages of exploration &#8594;</span>
             </a>
 
-            <a class="story-step reveal" href="careers.html">
+            <a class="story-step reveal" href="careers.html#human-capital">
               <div class="story-step__head">
                 <span class="story-step__num">07</span>
                 <span class="story-step__line" aria-hidden="true"></span>
               </div>
               <div class="story-step__media">
-                <img src="images/zingsa_trainings.jpg" alt="ZINGSA staff receiving training certificates">
+                <img src="images/in_house_training.jpeg" alt="ZINGSA in-house technical training session">
               </div>
               <h3 class="story-step__title">Growing our people</h3>
-              <p class="story-step__desc">Training and capacity-building carry the mission forward, from engineers to field officers.</p>
-              <span class="story-step__link">Careers at ZINGSA &#8594;</span>
+              <p class="story-step__desc">Space Engineering and GIS courses &#8212; from drone training and CNC machining to CubeSat development &#8212; build Zimbabwe&#8217;s space workforce.</p>
+              <span class="story-step__link">Human capital development &#8594;</span>
             </a>
 
             <a class="story-step reveal" href="resources.html">
@@ -459,9 +504,19 @@
             </div>
             <span class="impact-row__arrow" aria-hidden="true">&#8594;</span>
           </a>
+          <a class="impact-row" href="careers.html#human-capital">
+            <div class="impact-row__thumb">
+              <img src="images/patience_muchini_delivers_speech.jpeg" alt="">
+            </div>
+            <div>
+              <h3 class="impact-row__title">Human capital development</h3>
+              <p class="impact-row__desc">Space Engineering and GIS courses &#8212; drone training, CNC machining, 3D printing, and CubeSat development &#8212; growing Zimbabwe&#8217;s space workforce.</p>
+            </div>
+            <span class="impact-row__arrow" aria-hidden="true">&#8594;</span>
+          </a>
           <a class="impact-row" href="space-weather.html">
             <div class="impact-row__thumb">
-              <img src="images/space weather1.jpg" alt="">
+              <img src="images/space_weather.png" alt="">
             </div>
             <div>
               <h3 class="impact-row__title">Space Weather</h3>
@@ -506,6 +561,39 @@
             <span class="division-tile__num">05</span>
             <h3>Governance &amp; Administration</h3>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Human capital -->
+    <section class="section section--soft" id="human-capital">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Human capital development</p>
+          <h2 class="display display--md">Building the people behind the mission</h2>
+          <p class="lede">ZINGSA&#8217;s courses in Space Engineering and GIS equip engineers, analysts, and pilots with hands-on skills &#8212; from CubeSat development and CNC machining to drone operations and geospatial mapping.</p>
+        </div>
+        <div class="hcd-course-grid reveal-stagger">
+          <a class="hcd-course reveal" href="programs.html#cubesat">
+            <div class="hcd-course__media"><img src="images/shakhit_sat_cube_sat_images.jpeg" alt="CubeSat development training"></div>
+            <div class="hcd-course__body"><h4>CubeSat Development</h4><p>Small-satellite design, assembly, and testing.</p></div>
+          </a>
+          <a class="hcd-course reveal" href="services.html#drone-spraying">
+            <div class="hcd-course__media"><img src="images/zing_home_pilots_.png" alt="ZINGSA drone pilots"></div>
+            <div class="hcd-course__body"><h4>Drone Training</h4><p>Certified UAV operations and precision field work.</p></div>
+          </a>
+          <a class="hcd-course reveal" href="divisions.html#space-engineering">
+            <div class="hcd-course__media"><img src="images/precision_enginering.png" alt="Precision engineering: CNC machining, UAVs, satellites, and advanced manufacturing"></div>
+            <div class="hcd-course__body"><h4>3D Printing &amp; CNC</h4><p>Advanced manufacturing for aerospace hardware.</p></div>
+          </a>
+          <a class="hcd-course reveal" href="nsdi.html">
+            <div class="hcd-course__media"><img src="images/students_attached_at_work.jpeg" alt="GIS and geospatial training"></div>
+            <div class="hcd-course__body"><h4>GIS &amp; Geospatial</h4><p>Mapping, remote sensing, and spatial analysis.</p></div>
+          </a>
+        </div>
+        <div class="btn-group reveal" style="margin-top:2rem">
+          <a href="careers.html#human-capital" class="btn btn--primary">Explore all courses</a>
+          <a href="news.html" class="btn btn--navy-outline">Training in the news</a>
         </div>
       </div>
     </section>
@@ -566,11 +654,11 @@
             <h3>ZIMSAT-1 in orbit</h3>
             <p>Zimbabwe&#8217;s first satellite supporting drought, agriculture, and weather insight.</p>
           </a>
-          <a class="teaser reveal" href="applications.html">
-            <div class="teaser__media"><img src="images/geospatial_analytics.jpg" alt="Earth observation applications"></div>
-            <p class="teaser__date">Impact</p>
-            <h3>Applications hub</h3>
-            <p>From agro-ecological zones to disaster response &#8212; how EO serves the nation.</p>
+          <a class="teaser reveal" href="news.html">
+            <div class="teaser__media"><img src="images/patience_muchini_delivers_speech.jpeg" alt="Patience Muchini at Egyptian Space Agency"></div>
+            <p class="teaser__date">2026</p>
+            <h3>Zimbabwe speaks in Egypt</h3>
+            <p>Space Engineering&#8217;s Patience Muchini selected to address delegates at the Egyptian Space Agency satellite systems course.</p>
           </a>
         </div>
         <div class="btn-group reveal" style="margin-top:2rem">
@@ -641,6 +729,8 @@
             <div class="outreach-thumbs">
               <img src="images/space_week.jpg" alt="World Space Week">
               <img src="images/zitf.JPG" alt="ZITF exhibition">
+              <img src="images/scientist_exhibitions.jpeg" alt="ZINGSA scientists showcasing drone technology at exhibition">
+              <img src="images/dg_demostrations.jpeg" alt="Director General leading UAV technology demonstration">
             </div>
             <a href="news.html" class="btn btn--navy-outline">See news &amp; events</a>
           </div>
@@ -655,10 +745,11 @@
           <div>
             <p class="eyebrow">Work with us</p>
             <h2 class="display display--md">Join Zimbabwe&#8217;s space journey</h2>
-            <p>Partnerships and service bookings &#8212; we are building capacity for the nation.</p>
+            <p>Partnerships, service bookings, and human capital development &#8212; we are building capability for the nation.</p>
           </div>
           <div class="btn-group">
-            <a href="careers.html" class="btn btn--primary">View careers</a>
+            <a href="careers.html#human-capital" class="btn btn--primary">Human capital courses</a>
+            <a href="careers.html" class="btn btn--ghost">View careers</a>
             <a href="contact.html" class="btn btn--ghost">Contact ZINGSA</a>
           </div>
         </div>
@@ -669,38 +760,10 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-brand">ZINGSA</div>
-          <p>Innovation through space science and technology. Building Zimbabwe into a space power hub.</p>
-        </div>
-        <div>
-          <h4>Quick links</h4>
-          <ul>
-            <li><a href="applications.html">Applications</a></li>
-            <li><a href="space-weather.html">Space Weather</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="cors.html">CORS</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Agency</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="divisions.html">Divisions</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="nsdi.html">NSDI</a></li>
-            <li><a href="careers.html">Careers</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Legal</h4>
-          <ul>
-            <li>Research Act (Chapter 10:22)</li>
-            <li>Manpower Planning Act (Chapter 28:02)</li>
-            <li>ZINGSA Constitution 2018</li>
-          </ul>
-        </div>
+        <div><div class="footer-brand">ZINGSA</div><p>Innovation through space science and technology. Building Zimbabwe into a space power hub.</p></div>
+        <div><h4>Quick links</h4><ul><li><a href="applications.html">Applications</a></li><li><a href="space-weather.html">Space Weather</a></li><li><a href="news.html">News</a></li><li><a href="resources.html">Resources</a></li><li><a href="faq.html">FAQ</a></li><li><a href="cors.html">CORS</a></li></ul></div>
+        <div><h4>Agency</h4><ul><li><a href="about.html">About</a></li><li><a href="leadership.html">Leadership</a></li><li><a href="divisions.html">Divisions</a></li><li><a href="programs.html">Programs</a></li><li><a href="nsdi.html">NSDI</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li>Research Act (Chapter 10:22)</li><li>Manpower Planning Act (Chapter 28:02)</li><li>ZINGSA Constitution 2018</li></ul></div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Zimbabwe National Geospatial and Space Agency (ZINGSA). All rights reserved.</p>
