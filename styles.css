@@ -3942,9 +3942,15 @@ ul {
 
 .training-featured-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .training-featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .training-featured-grid .training-featured {
